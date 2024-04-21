@@ -1,0 +1,98 @@
+april 20 2024
+
+euclidean algorithm
+	finding the gretest common divisor of two numbers using the remainder
+
+Lemma: a subsidiary or intermediate theorem in an argument or proof
+
+Big-O notation
+Computing Runtime
+	speed of computer
+	system atchitecture
+	compiler used
+		compile to machine code
+		performing lots of optimizations
+	details of memory heirarchy
+		ram lookups take a fair bit of time
+		run out of ram, off to the hardisk can take ms, lots of time to a computer
+
+PROBLEM: figuring out accurate runtimes is a huge mess
+
+in reality you might not have all this info, eg someone else computer
+
+WANT: measure runtime without knowing details, get results for large inputs
+
+how will our runtime scale with input size
+
+Asymptotic Notation - A symp totic
+computing runtimes is hard, fine details of program and computer
+
+issues multiply runtimes by a [large] constant
+
+Asymtotic notation - scale with input size for runtime
+
+logn < sqrt(n) < n < nlogn < n^2 < 2^n
+
+Big-O notation, the specific form of asumtotic notation
+f(n) = O(g(n))(f of Big-O of g) or f <= g if there exist constant N and c so that for all n >= N, f(n) <= c * g(n)
+
+f is bounded above by some contant multiple of g
+
+use big-o notation to report algorithm runtimes
+this clarifies growth rate
+scale with input size
+
+Using Big-O
+rules: multiplicitive constants can be omitted
+
+Toolbox
+three of the most common algorithms
+	greedy algorithms
+	divide and conquer
+	dynamic programming
+
+Levels of Design:
+Naive algorithm: definition to algorithm, slow
+	come up with something first...
+
+Algorithm by way of standard Tools: standard techniques
+
+Optimized Algorithm: Improve existing algorithm
+
+Magic Algorithm: Unique insight
+
+_______
+Greedy Algorithm
+
+Here's a simplified explanation of how a greedy algorithm works:
+
+    Start with an empty solution or a partial solution.
+    At each step, choose the best option available based on a specific criterion or rule.
+    Update the solution by adding the chosen option.
+    Repeat steps 2 and 3 until a complete solution is obtained.
+
+option based problem solving, proving it is the safe choice
+
+safe choice
+prove safety
+solve subproblem
+estimate running time
+
+put max digit first
+chose patient with min treatment time
+cover leftmost point
+take item with maximim value per unit of weight
+
+assume everything is somehow sorted
+which sort order is convenient
+greedy move can be faster after sorting
+
+a choice is called safe if there is an optimal solution consisant with this first choice
+
+not all first choices are safe
+
+greedy choices are often unsafe
+
+General greedy strategy
+problem > greedy choice > safe choice, to subproblem and loop
+
